@@ -136,7 +136,7 @@ namespace VSOStatusInspector
                     if (h1 != null && p != null)
                     {
                         var msg = string.IsNullOrEmpty(h1.InnerText)
-                            ? string.Format("Visual Studio Online Status - {0}", p.InnerText)
+                            ? string.Format("Visual Studio Team Services Status - {0}", p.InnerText)
                             : string.Format("{0} - {1}", h1.InnerText, p.InnerText);
                         WriteToOutputWindow(msg);
                     }
