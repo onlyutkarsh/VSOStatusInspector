@@ -20,7 +20,7 @@ namespace VSOStatusInspector
     [ProvideOptionPage(typeof(VSOStatusInspectorOptions), EXTENSION_NAME, "General", 0, 0, true)]
     public sealed class VSOStatusInspectorPackage : Package, IDisposable
     {
-        private const string EXTENSION_NAME = "VSO Status Inspector";
+        private const string EXTENSION_NAME = "VSTS Status Inspector";
         private IVsStatusbar _bar;
         private IntPtr _hdcBitmap = IntPtr.Zero;
         private VSOStatusInspectorOptions _options;
@@ -93,7 +93,7 @@ namespace VSOStatusInspector
 
         private void OnTimerTick(object sender, ElapsedEventArgs e)
         {
-            Debug.WriteLine(string.Format("{0}: Checking VSO status", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")));
+            Debug.WriteLine(string.Format("{0}: Checking VSTS status", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")));
 
             //set icon to unknown till processing
             SetIcon(Resources.waiting);
